@@ -1,0 +1,150 @@
+<!-- Heading -->
+
+<mdb-card class="mb-4 wow fadeIn">
+
+    <!--Card content-->
+    <mdb-card-body class="d-sm-flex justify-content-between" style="background-color:lightgray;">
+
+        <h4 class="mb-sm-0 pt-3">
+            <a href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank" style="color:black;">Dashboard</a>
+        </h4>
+
+        <form class="d-flex md-form justify-content-center my-0">
+            <!-- Default input -->
+            <select mdbBtn id="eventlevel" name="eventlevel" style="border-radius: 4px; background-color:#4285f4; width:190px; height: 50px; color: white;">
+                <option value="today">Last 24 hours</option>
+                <option value="6h">Last 6 hours</option>
+                <option value="12h">Last 12 hours</option>
+              </select>
+            <button mdbBtn color="primary"  type="submit" style="border-radius: 4px;">
+                <mdb-icon fas icon="redo"></mdb-icon>
+            </button>
+
+        </form>
+
+    </mdb-card-body>
+
+</mdb-card>
+<!-- Heading -->
+
+<!--Grid row-->
+<div class="row wow fadeIn mt-5">
+
+    <!--Grid column-->
+    <div class="col-md-4 mb-4">
+
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">                    
+                    <span>Error Trend :</span>
+                    <app-linechart></app-linechart>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+    <div class="col-md-4 mb-4">
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">
+                    <span>OutStanding Requests :</span>
+                    <app-bubblechart></app-bubblechart>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">                    
+                    <span>Drive Space :</span>
+                    <canvas mdbChart [chartType]="chart1Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                            [colors]="chartColors" [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    
+    <!--Grid column-->
+
+</div>
+<!--Grid row-->
+<div class="row wow fadeIn mt-5">
+
+    <!--Grid column-->
+    <div class="col-md-4 mb-4">
+
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">
+                    <span>Event Viewer :</span>
+                    <app-bar2chart></app-bar2chart>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block">                    
+                    <span>Memory Utilization :</span>
+                    <app-piechart></app-piechart>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+
+
+</div>
+<!--Grid row-->
+
+<!--Grid row-->
+
+<!--Grid row-->
+
+<!--Grid row-->
+
+<!--Grid row-->
+
+
+
+
+
